@@ -46,7 +46,7 @@ void while_test(){
     printf("%d\n",sum);
 }
 
-void for_test(){
+voidcd for_test(){
     /*
     for(expr1; expr2; expr3)  -------> expr1: 초기화 배경 설정 / expr2: 검사 / expr3: 저장된 값을 증가
         statement                                                               ㄴexpr3이 루프의 몸체에서 마지막으로 수행
