@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 
-int if_test(){
+void if_test(){
     /*
     if(expr)
         statement
@@ -14,7 +14,7 @@ int if_test(){
     printf("%d\n", b);
 }
 
-int if_else_test(){
+void if_else_test(){
     /*
     if(expr)
         statement1
@@ -31,7 +31,7 @@ int if_else_test(){
     printf("%d\n", b);
 }
 
-int while_test(){
+void while_test(){
     /*
     while(expr)
         statment
@@ -46,7 +46,7 @@ int while_test(){
     printf("%d\n",sum);
 }
 
- for_test(){
+void for_test(){
     /*
     for(expr1; expr2; expr3)  -------> expr1: 초기화 배경 설정 / expr2: 검사 / expr3: 저장된 값을 증가
         statement                                                               ㄴexpr3이 루프의 몸체에서 마지막으로 수행
