@@ -3,6 +3,7 @@
 
 int main(){
     int i, j, score[CLASS_SIZE], sum =0, tmp;
+    int n = sizeof(score)/sizeof(score[0]);   //배열의 크기 자동 계산  
     printf("Input %d scores:", CLASS_SIZE);
     for(i=0;i<CLASS_SIZE;i++){
         scanf("%d",&score[i]);
@@ -10,7 +11,7 @@ int main(){
     }
     
     //버블 정렬
-    for(i=0;i<CLASS_SIZE-1;i++){
+    for(i=0;i<n-1;i++){
         for(j=CLASS_SIZE-1;j>i;--j){
             if(score[j-1]<score[j]){
                 tmp=score[j-1];
