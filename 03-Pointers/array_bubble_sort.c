@@ -1,7 +1,7 @@
 #include <stdio.h>
 #define CLASS_SIZE 5
 
-int count_below_avg(int arr[],int n, int sum);
+int count_below_avg(int arr[],int n);
 
 int main(){
     int i, j, score[CLASS_SIZE], sum =0, tmp;
@@ -31,11 +31,15 @@ int main(){
         (double)sum/CLASS_SIZE," is the class average");
     
     printf("%18d%s\n",
-        count_below_avg(score,n,sum)," students are below the average score");
+        count_below_avg(score,n)," students are below the average score");
     return 0;
 }
 
-int count_below_avg(int arr[],int n,int sum){
+int count_below_avg(int arr[],int n){
+    int sum=0;
+    for(int i=0;i<nf;i++){
+        sum+=arr[i];
+    }
     double avg = (double)sum/n;
     int cnt=0;
     for(int i=0;i<n;i++){
