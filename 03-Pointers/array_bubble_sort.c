@@ -1,9 +1,11 @@
 #include <stdio.h>
 #define CLASS_SIZE 5
 
+int count_below_avg(int arr[],int n, int sum);
+
 int main(){
     int i, j, score[CLASS_SIZE], sum =0, tmp;
-    int n = sizeof(score)/sizeof(score[0]);   //배열의 크기 자동 계산  
+    int n = sizeof(score)/sizeof(score[0]);   //배열의 크기 자동 계산   
     printf("Input %d scores:", CLASS_SIZE);
     for(i=0;i<CLASS_SIZE;i++){
         scanf("%d",&score[i]);
@@ -26,7 +28,19 @@ int main(){
     }
     printf("%18d%s\n%18.1f%s\n",
         sum," is the sum of all the scores",
-        (double)sum/CLASS_SIZE," is the class avarage");
+        (double)sum/CLASS_SIZE," is the class average");
     
+    printf("%18d%s\n",
+        count_below_avg(score,n,sum)," students are below the average score");
     return 0;
+}
+
+int count_below_avg(int arr[],int n,int sum){
+    double avg = (double)sum/n;
+    int cnt=0;
+    for(int i=0;i<n;i++){
+        if(arr[i]<avg)
+            cnt++;
+    }
+    return cnt;
 }
