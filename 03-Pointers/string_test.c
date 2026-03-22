@@ -8,12 +8,12 @@ int main(){
     int i, sum =0;
 
     printf("\nHi!   What's your name?  ");
-    for(i=0;(c=getchar())!='\n';++i){  //getchar() = 키보드부터 문자 딱 하나를 가져온다.
-        while(isalpha(c)==0)
-            c=getchar();
+    for(i=0;(c=getchar())!='\n';){  //getchar() = 키보드부터 문자 딱 하나를 가져온다.
+        if(!isalpha(c))
+            continue;
         name[i]=c;
-        if(isalpha(c))
-            sum += c;
+        sum += c;
+        ++i;
     }
     name[i] = '\0'; // \0 → null(컴퓨터의 마침표) 
     printf("\n%s%s%s\n%s",
