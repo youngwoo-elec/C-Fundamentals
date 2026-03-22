@@ -7,7 +7,7 @@
 - **입력 재지정 '<'**: "파일을 먹여라" 키보드(stdin)이 아닌 파일의 내용을 입력값으로 사용
     → ex) ./running_sum < running_sum_data.txt
 - **출력 재지정 '>'**: "결과를 적어라" 화면(stdout)에 뜰 결과를 파일에 저장
-    → ex) ./running_sum > result.txt
+    → ex) ./running_sum > result.txt  
 
 
 >### 📅 2026-03-21
@@ -23,4 +23,15 @@
     - 안쪽 루프: 인접 요소끼리 비교 및 Swap
 - **형 변환 연산자**: ex) (float)sum
 - 반복문 `반복 조건` 항상 유의하기!
-- 함수의 `독립성`(재사용 용이) vs `효율성`(빠르게)
+- 함수의 `독립성`(재사용 용이) vs `효율성`(빠르게)  
+
+
+>### 📅 2026-03-22  
+    ⚠️ Input Stream Ambiguity (입력 스트림의 모호성)
+- *problem*: 한 루프 내에서 `getchar()`을 중복 사용하여 종료 조건('\n')을 내부 루프가 먹어치워 Input hang 발생
+- *lesson*: 입력과 종료 검사는 반드시 한 곳에서 중앙 제어
+- *solution*: `for`에서는 입력만, 내부 루프에서는 `if(isalpha())`로 필터링만 수행  
+    🛠️ `Continue` : 반복문 몸체의 남은 부분을 skip하고 다음 바퀴로 강제 소환
+- **for문에서**: 몸체 skip → **증감(expr3)** → 조건식(expr2)  
+    → for문의 증감식을 비우고 몸체에서 증감 시행!
+- for문의 expr1,2,3은 비워둘 수 있다
