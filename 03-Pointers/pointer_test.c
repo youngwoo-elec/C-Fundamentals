@@ -19,6 +19,7 @@ int main(){
             *p = '\n';
     }
     printf("%s\n", s);
+    printf("%p\n",(void*)s);
     return 0;
-
+    
 }
