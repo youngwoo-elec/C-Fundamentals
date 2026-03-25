@@ -11,7 +11,8 @@ int main() {
 
     if (ifp == NULL) { // 파일 열기 실패 시 예외 처리 (필수!)
         printf("파일을 열 수 없습니다.\n");
-        return 1;
+        exit(1); //stdlib에 있음
+        //return 1;
     }
 
     fprintf(ifp, "KNU Electronics Engineering\n"); // 파일에 쓰기
