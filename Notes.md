@@ -27,7 +27,7 @@
 
 
 >### 📅 2026-03-22
-- `getchar()` ㆍ `putchar()`: 문자 하나씩 입ㆍ출력  
+- `getchar()` ㆍ `putchar()`: 문자 하나씩 입ㆍ출력  → **int형(ASCII CODE)**  
     ⚠️ Input Stream Ambiguity (입력 스트림의 모호성)
 - *problem*: 한 루프 내에서 `getchar()`을 중복 사용하여 종료 조건('\n')을 내부 루프가 먹어치워 Input hang 발생
 - *lesson*: 입력과 종료 검사는 반드시 한 곳에서 중앙 제어
@@ -90,5 +90,8 @@
     - `argc`: 인자의 개수 (argument count)  
     - `*argv[]`: 인자의 내용 (argument vector) → 문자열의 배열, **argv[0]=실행파일의 경로/이름 
 - ifp: infile pointer   ofp: outfile pointer
+- `getc(FILE*stream)`: getchar 파일버전
+- `putc(int c, FILE*stream)`: putchar 파일버전
+- **EOF**: End-Of-File (-1)  
 
 
