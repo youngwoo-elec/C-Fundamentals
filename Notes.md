@@ -67,20 +67,20 @@
 
 >### 📅 2026-03-25
 - **파일 포인터**: 파일이 메모리 어디에 준비되어 있는지 가리키는 8비트 주소값
-- **주소 대입**: `ifp=fopen` 파일의 주소 자체를 ifp에 저장 (내용물 *ifp 아님에 주의)  
+- **주소 대입**: `fp=fopen` 파일의 주소 자체를 fp에 저장 (내용물 *fp 아님에 주의)  
     🛠️ 파일  
 - **fopen 모드**  
     - `"r"`: 읽기 → 파일이 없으면 NULL 포인터 리턴 / & fscanf, fgets  
     - `"w"`: 쓰기 → 기존 내용은 다 지우고 새로 씀 / & fprintf  
     - `"a"`: 첨부  
-    - `ifp = fopen(...)` 직후에는 반드시 **if(ifp == NULL)**을 확인
+    - `fp = fopen(...)` 직후에는 반드시 **if(fp == NULL)**을 확인
 - `fgets(배열명, 읽을 사이즈, 파일포인터)`: 한 줄 읽기  
-    ex) fgets(buffer, sizeof(buffer),ifp);
+    ex) fgets(buffer, sizeof(buffer),fp);
 - `fscanf(파일포인터, "형식", &변수)`: 파일에서 이 형식으로 데이터를 뽑아서 변수에 넣어라  
-    ex) fscanf(ifp, "%d", &num);  
+    ex) fscanf(fp, "%d", &num);  
     scanf = 키보드(stdin) vs fscanf = 파일(file)
 - `fprintf(파일포인터, "형식", 값)`: 파일에 이 형식으로 값을 적어라  
-    ex) fprintf(ifp, "Result: %d\n", num);
+    ex) fprintf(fp, "Result: %d\n", num);
 - **fclose**: fopen 시 필수!!  
 
 
@@ -88,6 +88,7 @@
 - **main 함수의 인자**  
     → int main(int argc, char *argv[])  
     - `argc`: 인자의 개수 (argument count)  
-    - `*argv[]`: 인자의 내용 (argument vector) → 문자열의 배열, **argv[0]=실행파일의 경로/이름  
+    - `*argv[]`: 인자의 내용 (argument vector) → 문자열의 배열, **argv[0]=실행파일의 경로/이름 
+- ifp: infile pointer   ofp: outfile pointer
 
 
