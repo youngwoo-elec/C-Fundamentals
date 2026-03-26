@@ -91,7 +91,6 @@
     - `*argv[]`: 인자의 내용 (argument vector) → 문자열의 배열, **argv[0]=실행파일의 경로/이름 
 - ifp: infile pointer   ofp: outfile pointer
 - `getc(FILE*stream)`: getchar 파일버전
-- `putc(int c, FILE*stream)`: putchar 파일버전
+- `putc('~~', FILE*stream)`: putchar 파일버전
 - **EOF**: End-Of-File (-1)  
-
 
