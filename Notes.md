@@ -81,6 +81,13 @@
     scanf = 키보드(stdin) vs fscanf = 파일(file)
 - `fprintf(파일포인터, "형식", 값)`: 파일에 이 형식으로 값을 적어라  
     ex) fprintf(ifp, "Result: %d\n", num);
-- **fclose**: fopen 시 필수!!
+- **fclose**: fopen 시 필수!!  
+
+
+>### 📅 2026-03-26
+- **main 함수의 인자**  
+    → int main(int argc, char *argv[])  
+    - `argc`: 인자의 개수 (argument count)  
+    - `*argv[]`: 인자의 내용 (argument vector) → 문자열의 배열, **argv[0]=실행파일의 경로/이름  
 
 
