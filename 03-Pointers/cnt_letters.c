@@ -27,5 +27,7 @@ int main(int argc, char *argv[]){
         fprintf(ofp, "%c:%5d    ", 'A'+i, letter[i]);
     }
     putc('\n',ofp);
+    fclose(ifp);
+    fclose(ofp);
     return 0;
 }
