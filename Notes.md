@@ -94,3 +94,14 @@
 - `putc('~~', FILE*stream)`: putchar 파일버전
 - **EOF**: End-Of-File (-1)  
 
+
+>### 📅 2026-03-27
+- cnt_letters 프로그램 22번째 줄  
+    → ++letter[c - 'A'];  
+    if int-type c == 'A' / ++letter[0]  
+    if int type c == 'B' / ++letter[1]  
+- cnt_letters 프로그램 27번째 줄  
+    → printf("%c",'A'+i);  
+    'A'+i가 문자 형식으로 출력
+- **ASCII CODE**의 논리를 항상 유의하기  
+    → 컴퓨터에게 문자는 결국 정수(int)
