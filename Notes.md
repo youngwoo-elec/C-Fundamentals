@@ -104,4 +104,14 @@
     → printf("%c",'A'+i);  
     'A'+i가 문자 형식으로 출력
 - **ASCII CODE**의 논리를 항상 유의하기  
-    → 컴퓨터에게 문자는 결국 정수(int)
+    → 컴퓨터에게 문자는 결국 정수(int)  
+
+
+>### 📅 2026-03-28  
+- **ASCII 연산**:  'a'-'A' = 32  
+   ⚠️ Segmentation fault (core dumped)  
+- fopen 실패, ifp = NULL인 상태로 getc(ifp)
+- 출력파일(argv[2]) 입력 x
+- **해결책**       
+if (ifp == NULL || ofp == NULL) 
+        exit(1);
