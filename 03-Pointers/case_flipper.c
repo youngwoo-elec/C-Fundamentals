@@ -16,7 +16,8 @@ int main(int argc, char *argv[]) {
 
     ifp = fopen(argv[1], "r");
     ofp = fopen(argv[2], "w");
-
+    if (ifp == NULL || ofp == NULL) 
+        exit(1);
 
    
     while ((c = getc(ifp)) != EOF) {
