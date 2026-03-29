@@ -114,4 +114,10 @@
 - 출력파일(argv[2]) 입력 x
 - **해결책**       
 if (ifp == NULL || ofp == NULL) 
-        exit(1);
+        exit(1);  
+
+
+>### 📅 2026-03-29
+- Encryption: 암호화
+- 암호화에서의 modulo와 오버플로우  
+- 1byte 0~255 초과시 하위 8bit만 가져감
