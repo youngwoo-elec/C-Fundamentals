@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) {
 
     while ((c = getc(ifp)) != EOF) {
         // ASCII 값을 키만큼 밀어서 저장
-        putc(c + KEY, ofp);
+        putc(c - KEY, ofp);
     }
 
     fclose(ifp);
