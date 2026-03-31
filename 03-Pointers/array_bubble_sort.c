@@ -37,7 +37,7 @@ int main(){
 
 int count_below_avg(int arr[],int n){
     int sum=0;
-    for(int i=0;i<nf;i++){
+    for(int i=0;i<n;i++){
         sum+=arr[i];
     }
     double avg = (double)sum/n;
