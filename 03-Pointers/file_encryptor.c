@@ -11,8 +11,8 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    ifp = fopen(argv[1], "r");
-    ofp = fopen(argv[2], "w");
+    ifp = fopen(argv[1], "rb");
+    ofp = fopen(argv[2], "wb");
     
     if (ifp == NULL || ofp == NULL) {
         printf("Error: Could not open files.\n");
@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) {
 
     while ((c = getc(ifp)) != EOF) {
         // ASCII 값을 키만큼 밀어서 저장
-        putc(c + KEY, ofp);
+        putc(c - KEY, ofp);
     }
 
     fclose(ifp);
