@@ -118,7 +118,7 @@ if (ifp == NULL || ofp == NULL)
 
 
 >### 📅 2026-03-29 ~ 31
-- Encryption: 암호화  
+- **Encryption (암호화)**: 값에 Key를 더해서 파일을 암호화
     ⚠️ 암호화 후 복호화 시 코드 내용이 깨지는 오류 발생
     - Binary mode (이진모드 rb,rw)
     - **vs text mode**: 텍스트 모드는 줄 바꿈 시 \r\n(2바이트) 사용
