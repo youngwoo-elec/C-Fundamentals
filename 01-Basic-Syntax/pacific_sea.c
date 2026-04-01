@@ -1,6 +1,7 @@
 /*Measuring the pacific Sea*/
-#include "pacific_sea.h" // "파일 명"
+
 int main(void){
+    #include "pacific_sea.h" // "파일 명"
     const int pacific_sea = AREA; //in sq kilometers
     double acres, sq_miles, sq_feet, sq_inches;
 
