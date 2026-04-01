@@ -139,4 +139,10 @@ if (ifp == NULL || ofp == NULL)
     ex) {a=1;} → 복합문장
 - 컴파일러는 구문(syntax)만을 검사  
     ex) `{}`, `;` 등: '아무것도 안 하는' 문장
+- **Overflow**: 타입이 담을 수 있는 최대치 초과 → `inf`
+- 02-Functions/better_average: 점진적 평균   
+    - overflow를 방지
+    - overflow 아닐 시: **부동소수점 덧셈에서 유효숫자 소실 (Loss Of Significance)**   
+        : 크기 차이가 매우 큰 두 수를 더할 때, 작은 수의 유효숫자가 무시되어 계산 결과에서 사라지는 문제
+    → 알고리즘 설계의 중요성을 보여줌
 
