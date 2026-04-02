@@ -12,12 +12,12 @@ int main(){
     printf("%s %c%c%s\n", s, *s+6, *s+7, s+1);
     strcpy(s, "she sells sea shells by the seashore");
     p = s+14;
-    for(;*p!='\0';++p){
+    for(;*p!='\0';++p)
         if(*p == 'e')
             *p = 'E';
-        if(*p == ' ')
+        else if(*p == ' ')
             *p = '\n';
-    }
+    
     printf("%s\n", s);
     printf("%p\n",(void*)s);
     return 0;
