@@ -152,8 +152,15 @@ if (ifp == NULL || ofp == NULL)
     - *printf* → print한 문자의 개수 |`\n`도 하나의 문자로 카운트
       - `\0`: printf, strcpy 등 함수는 `\0`을 만나면 멈춰버린다.
     - *scanf* → 성공적으로 읽어들인 변수의 개수 
-      - 타입이 맞지 않는 변수가 들어오면 멈춰버린다.   
+      - 타입이 맞지 않는 변수가 들어오면 멈춰버린다.
     🧩 Single Statement Rule   
 - 03-pointer/pointer_test.c for문 내부에서 if-else if 문을 중괄호 없이 사용
 - **if-if**: 두 개의 문장 (`{}`필요) 
-- **if-else**: 연속된 하나의 제어 구조 → for문이 `{}`없이 제어 가능
+- **if-else**: 연속된 하나의 제어 구조 → for문이 `{}`없이 제어 가능   
+    🧩 Tokens (토큰): The Atoms of C
+- 키워드 (Keywords): `int`, `return`, `if`.. (C언어가 미리 찜한 단어)
+- 식별자 (Identifiers): a, cnt_s, **main**.. (작성자가 붙인 이름)
+- 상수 (Constants): 10, 3.14, 'A' (정해진 값)
+- 문자열 리터럴 (String Literals): "Hello" (큰 따옴표 안의 뭉치)
+- 연산자 (Operators): `+`,`-`,`==`... (계산 기호)
+- 구분자(Punctuators): `;`, `,`, `(`, `)`, `{`, `}`... (문법적 경계선)
