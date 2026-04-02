@@ -147,11 +147,13 @@ if (ifp == NULL || ofp == NULL)
     → 알고리즘 설계의 중요성을 보여줌   
 
 
-    >### 📅 2026-04-02
-    - `printf, scanf`: **int-type 출력 가능**    
-        - *printf* → print한 문자의 개수 |`\n`도 하나의 문자로 카운트
-          - `\0`: printf, strcpy 등 함수는 `\0`을 만나면 멈춰버린다.
-        - *scanf* → 성공적으로 읽어들인 변수의 개수 
-          - 타입이 맞지 않는 변수가 들어오면 멈춰버린다.
-
-
+>### 📅 2026-04-02
+- `printf, scanf`: **int-type 출력 가능**    
+    - *printf* → print한 문자의 개수 |`\n`도 하나의 문자로 카운트
+      - `\0`: printf, strcpy 등 함수는 `\0`을 만나면 멈춰버린다.
+    - *scanf* → 성공적으로 읽어들인 변수의 개수 
+      - 타입이 맞지 않는 변수가 들어오면 멈춰버린다.   
+    🧩 Single Statement Rule   
+- 03-pointer/pointer_test.c for문 내부에서 if-else if 문을 중괄호 없이 사용
+- **if-if**: 두 개의 문장 (`{}`필요) 
+- **if-else**: 연속된 하나의 제어 구조 → for문이 `{}`없이 제어 가능
