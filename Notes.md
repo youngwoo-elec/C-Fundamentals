@@ -178,3 +178,5 @@ if (ifp == NULL || ofp == NULL)
 - `{ }1+`: 괄호 안의 항목을 한번 이상 반복
 - `{ }opt`: 옵션인 항목   
 - ex) lowercase_letter ::= a|b|c|...|z   
+    🧩 주석 (Comment) : 컴파일러가 공백 문자로 대치
+- `/* ~ */` or `// ~`
