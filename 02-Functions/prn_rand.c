@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
+int rand(void);
 
 int main(){
     int i, n;
