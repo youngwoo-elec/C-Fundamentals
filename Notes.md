@@ -190,7 +190,8 @@ if (ifp == NULL || ofp == NULL)
 - 링커(Linker)가 오브젝트 파일을 모을 때, 똑같은 이름에, 몸체가 여러 개 발견될 때 발생
 - **☆헤더 파일에는 선언만**: 함수,변수의 정의 X   
    ex) 파일 이름    역할         내부 내용(예시)
-    -   A.h      공용 설계도    `int add(int a,int b);`
-    -   A.c      실제 공장      `#include "A.h`" + `int add(...){return a+b; }`
+    -   Add.h      공용 설계도    `int add(int a,int b);`
+    -   Add.c      실제 공장      `#include "A.h`" + `int add(...){return a+b; }`
     -   main.c   조립 라인1     `#include "A.h"` + `add(1,2);` (호출)
-    -   sub.c    조립 라인2     `#include "A.h"` + `add(3,4);` (호출)
+    -   sub.c    조립 라인2     `#include "A.h"` + `add(3,4);` (호출)   
+    → `gcc main.c Add.c -o test` / Include Headers for the Compiler, Include Sources for the Linker
