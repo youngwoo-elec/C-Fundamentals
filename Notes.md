@@ -200,3 +200,4 @@ if (ifp == NULL || ofp == NULL)
 - #define ADD_H     // ADD_H를 정의하고 아래 내용을 진행   
     ~~~~   
 - #endif        // 끝
+- 프로젝트 루트(.git) 이탈 및 삭제 사고를 mv 백업과 git clone 원격 복제로 가차 없이 수습함.
