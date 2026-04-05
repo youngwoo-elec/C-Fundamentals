@@ -198,6 +198,13 @@ if (ifp == NULL || ofp == NULL)
     🛠️  Header Guards (헤더 가드) : 함수 선언의 중복까지 방지
 - #infdef ADD_H     // 만약 ADD_H가 정의되어 있지 않다면 
 - #define ADD_H     // ADD_H를 정의하고 아래 내용을 진행   
-    ~~~~   
+    (코드 내용)   
 - #endif        // 끝
 - 프로젝트 루트(.git) 이탈 및 삭제 사고를 mv 백업과 git clone 원격 복제로 가차 없이 수습함.
+
+
+>### 📅 2026-04-05
+- `rand()`: 임의의 정수값을 리턴    // stdlib.h
+- `srand()`: `rand`의 시드(출발점)을 지정
+- `time(NULL)`: 현재 시간 값을 리턴     // time.h   
+    → srand(time(NULL));
