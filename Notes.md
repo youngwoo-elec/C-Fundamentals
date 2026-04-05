@@ -219,3 +219,4 @@ if (ifp == NULL || ofp == NULL)
         scanf("%d", &a);
         clock_t end = clock();
         double diff = (double)/(end-begin)/CLOCK_PER_SEC    //CLOCK_PER_SEC: 매크로 상수
+        => diff = 0.00 (대기시간: 입력을 기다리는 동안 CPU는 휴식(Idle)상태)
