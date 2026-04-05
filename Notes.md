@@ -206,5 +206,16 @@ if (ifp == NULL || ofp == NULL)
 >### 📅 2026-04-05
 - `rand()`: 임의의 정수값을 리턴    // stdlib.h
 - `srand()`: `rand`의 시드(출발점)을 지정
-- `time(NULL)`: 현재 시간 값을 리턴     // time.h   
+- `time(NULL)`: 현재 시간 값을 리턴(초 단위)     // time.h   
     → srand(time(NULL));
+- 소요시간 측정: time vs clock
+1. time: 초 시계(소요시간 자체)   
+    ex) int begin = time(NULL);
+        scanf("%d", &a);
+        int end = time(NULL);
+        int diff = end - begin;
+2. clock: 프로그램이 CPU를 점유한 시간
+    ex) clock_t begin = clock();    //clock_t: 시간 측정용 전용 자료형
+        scanf("%d", &a);
+        clock_t end = clock();
+        double diff = (double)/(end-begin)/CLOCK_PER_SEC    //CLOCK_PER_SEC: 매크로 상수
