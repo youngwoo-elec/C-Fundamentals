@@ -204,7 +204,8 @@ if (ifp == NULL || ofp == NULL)
 
 
 >### 📅 2026-04-05
-- `rand()`: 임의의 정수값을 리턴    // stdlib.h
+- `rand()`: 임의의 정수값을 리턴    // stdlib.h   
+    - `rand()%(max-min+1) + min`: min~max
 - `srand()`: `rand`의 시드(출발점)을 지정
 - `time(NULL)`: 현재 시간 값을 리턴(초 단위)     // time.h   
     → srand(time(NULL));
