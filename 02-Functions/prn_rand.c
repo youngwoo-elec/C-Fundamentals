@@ -1,7 +1,9 @@
 #include <stdio.h>
-int rand(void);
+#include <stdlib.h>
+#include <time.h>
 
 int main(){
+    srand(time(NULL));
     int i, n;
     printf("\n%s\n%s",
         "Some randomly distuibuted integers will be printed.",
@@ -10,7 +12,7 @@ int main(){
     for(i=0;i<n;++i){
         if(i%8==0)
             putchar('\n');
-        printf("%7d ", rand());
+        printf("%7d ", rand()%900+100);
     }
     printf("\n");
     return 0;
