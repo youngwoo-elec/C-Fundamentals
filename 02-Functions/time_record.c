@@ -1,17 +1,19 @@
-#include <stdio.h>
-#include <time.h>
+    #include <stdio.h>
+    #include <time.h>
 
-int main(){
-    int a, b;
-    long begin, end, diff;
-    
-    printf("a:  ");
-    begin = time(NULL);
-    scanf("%d", &a);
-    end = time(NULL);
+    int main(){
+        int a;
+        clock_t begin, end;
+        double diff;
 
-    diff = end - begin;
+        printf("a:  ");
+        begin = clock();
+        scanf("%d", &a);
+        end = clock();
 
-    printf("%ld\n", diff);
+        diff = (double)(end - begin)/CLOCKS_PER_SEC;
 
-}
+        printf("%.3f\n", diff);
+        return 0;
+
+    }
