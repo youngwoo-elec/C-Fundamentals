@@ -2,47 +2,34 @@
 #include <stdlib.h>
 #include <time.h>
 
+#include "bubble_sort.h"
+#include "quick_sort.h"
+
 #define ARR_SIZE  10000
 
-void swap(int *a, int *b);
-void BubbleSort(int arr[], int n);
-
 int main(){
+    srand(time(NULL));
     clock_t begin, end;
     double diff;
-    int arr[ARR_SIZE];
-    int size = sizeof(arr)/sizeof(arr[0]);
-    srand(time(NULL));
+    int arr1[ARR_SIZE], arr2[ARR_SIZE];
     for(int i=0;i<ARR_SIZE;++i){
-        arr[i] = rand()%50+1;
+        int num = rand()%(90+10);
+        arr1[i] = num;
+        arr2[i] = num;
     }
+    
+    begin = clock();
+    BubbleSort(arr1,ARR_SIZE);
+    end = clock();
+    diff = (double)(end-begin)/CLOCKS_PER_SEC;
+    printf("Bubble_Sort: %lf초\n", diff);
 
     begin = clock();
-    BubbleSort(arr,size);
+    quicksort(arr2,0,ARR_SIZE-1);
     end = clock();
-    /*
-    for(int i=0;i<ARR_SIZE;++i){
-        printf("%d ", arr[i]);
-    }
-    printf("\n");
-    */
     diff = (double)(end-begin)/CLOCKS_PER_SEC;
-    printf("%lf\n", diff);
-}
+    printf("Quick_Sort: %lf초\n", diff);
 
+    return 0;
 
-
-void BubbleSort(int arr[], int n){
-    for(int i=0;i<n-1;i++){
-        for(int j=n-1;j>i;j--){
-            if (arr[j-1]>arr[j])
-                swap(&arr[j-1],&arr[j]);
-        }
-    }
-}
-
-void swap(int *a,int *b){
-    int tmp = *a;
-    *a = *b;
-    *b = tmp;
 }
