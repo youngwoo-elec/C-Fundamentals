@@ -221,3 +221,16 @@ if (ifp == NULL || ofp == NULL)
         clock_t end = clock();
         double diff = (double)/(end-begin)/CLOCK_PER_SEC    //CLOCK_PER_SEC: 매크로 상수
         => diff = 0.00 (대기시간: 입력을 기다리는 동안 CPU는 휴식(Idle)상태)
+
+
+>### 📅 2026-04-06
+- bubble sort와 quick sort의 처리 속도를 비교하기 위한 코드를 제작   
+    ⚠️  multiple definition of `main`, `swap`
+→ 1. 각 소스파일의 main 함수 삭제, `swap`을 실행파일(clock_test.c) 내부에 선언   
+  2. ! 소스파일의 swap이 길을 잃는 문제 발생
+  3. 별도의 swap.c/.h를 제작, 소스파일들에 전처리해서 해결   
+    ⚠️ implicit declaration of function `quicksort`
+→ 1. clock_test.c 내부에 quicksort(); 함수 원형을 직접 선언해서 해결
+  2. bubble.h 내부에 ifndef에도 QUICKSORT_H라고 적었던 실수    
+    → 코드 전체가 유령화
+  3. 수정 후 문제 해결됨
