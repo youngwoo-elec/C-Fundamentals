@@ -1,12 +1,9 @@
 #include "bubble_sort.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include "swap.h"
 
-#define ARR_SIZE 10
 
-void swap(int *a, int *b);
-void BubbleSort(int arr[], int n);
+//void BubbleSort(int arr[], int n);
+/*
 int main(){
     int arr[ARR_SIZE];
     int size = sizeof(arr)/sizeof(arr[0]);
@@ -19,7 +16,7 @@ int main(){
     }
     printf("\n");
 }
-
+*/
 
 void BubbleSort(int arr[], int n){
     for(int i=0;i<n-1;i++){
@@ -28,10 +25,4 @@ void BubbleSort(int arr[], int n){
                 swap(&arr[j-1],&arr[j]);
         }
     }
-}
-
-void swap(int *a,int *b){
-    int tmp = *a;
-    *a = *b;
-    *b = tmp;
 }

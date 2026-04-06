@@ -1,14 +1,11 @@
 #include "quick_sort.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include "swap.h"
 
-#define ARR_SIZE 10
 
-void swap(int *a, int *b);
-int partition(int arr[], int low, int high);
-void quicksort(int arr[], int low, int high);
+//int partition(int arr[], int low, int high);
+//void quicksort(int arr[], int low, int high);
 
+/*
 int main(){
     int arr[ARR_SIZE];
     int size = sizeof(arr)/sizeof(arr[0]);
@@ -24,12 +21,7 @@ int main(){
     printf("\n");
     return 0;
 }
-
-void swap(int *a, int *b){
-    int tmp = *a;
-    *a = *b;
-    *b = tmp;
-}
+*/
 
 int partition(int arr[], int low, int high){
     int pivot = arr[low];
