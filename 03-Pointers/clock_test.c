@@ -4,7 +4,7 @@
 
 #include "bubble_sort.h"
 #include "quick_sort.h"
-void quicksort(int arr[], int low, int high);
+//void quicksort(int arr[], int low, int high);
 
 #define ARR_SIZE  10000
 

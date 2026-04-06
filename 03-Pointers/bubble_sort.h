@@ -1,5 +1,5 @@
-#ifndef QUICK_SORT_H
-#define QUICK_SORT_H
+#ifndef BUBBLE_SORT_H
+#define BUBBLE_SORT_H
 
 void BubbleSort(int arr[], int n);
 
