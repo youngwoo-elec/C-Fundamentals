@@ -240,5 +240,10 @@ if (ifp == NULL || ofp == NULL)
 - `\"`: " 출력  `\'`: ' 출력
 - `\b`: backspace   `\t`: tab
 - 경우에 따라 문자를 표현하는데 int 형이 사용
-- 4 byte 컴퓨터 int형: 2^32 → -2^15~2^15-1
-- `e+n`: 소수점을 오른쪽으로 n칸    `e-n`: 소수점을 왼쪽으로 n칸
+- 4 byte 컴퓨터 int형: 2^32 → -2^31~2^31-1
+- `unsigned형`: 부호가 없는 형태 / unsigned int형: 0~2^32-1
+- `e+n`: 소수점을 오른쪽으로 n칸    `e-n`: 소수점을 왼쪽으로 n칸   
+    🛠️ typedef : 기존 자료형에 새로운 이름을 붙이기
+- **가독성**을 위해 사용
+- **이식성**: A sysyem int: 4 byte  B system long: 4 byte / ex) typedef int → long INT32;
+- **구조체**: 추후에 공부할 예정
