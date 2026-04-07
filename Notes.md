@@ -234,3 +234,9 @@ if (ifp == NULL || ofp == NULL)
   2. bubble.h 내부에 ifndef에도 QUICKSORT_H라고 적었던 실수    
     → 코드 전체가 유령화
   3. 수정 후 문제 해결됨
+
+
+>### 📅 2026-04-07
+- `\"`: " 출력  `\'`: ' 출력
+- `\b`: backspace   `\t`: tab
+- 경우에 따라 문자를 표현하는데 int 형이 사용
