@@ -264,4 +264,8 @@ if (ifp == NULL || ofp == NULL)
     - **실행 속도**: 스택 메모리 할당 및 점프 비용 발생
     - **메모리**: 코드 영역에 한 번만 저장 → **용량 절약**
     - **타입 검사**: 엄격함
-- 전처리에도 실행순서가 있다.
+- 전처리에도 실행순서가 있다.   
+    ⚠️ undefined reference to 'pow' or 'sqrt'
+- gcc 커맨드 `-lm` 사용
+- **libc**(stdio,stdlib 등): auto-linked
+- **이외의 라이브러리**: 라이브러리 연결 `-l` 필요
