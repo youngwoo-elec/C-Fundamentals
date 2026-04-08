@@ -227,7 +227,7 @@ if (ifp == NULL || ofp == NULL)
 - bubble sort와 quick sort의 처리 속도를 비교하기 위한 코드를 제작   
     ⚠️  multiple definition of `main`, `swap`
 → 1. 각 소스파일의 main 함수 삭제, `swap`을 실행파일(clock_test.c) 내부에 선언   
-  2. ! 소스파일의 swap이 길을 잃는 문제 발생
+  2. ⚠️ 소스파일의 swap이 길을 잃는 문제 발생
   3. 별도의 swap.c/.h를 제작, 소스파일들에 전처리해서 해결   
     ⚠️ implicit declaration of function `quicksort`
 → 1. clock_test.c 내부에 quicksort(); 함수 원형을 직접 선언해서 해결
@@ -264,3 +264,4 @@ if (ifp == NULL || ofp == NULL)
     - **실행 속도**: 스택 메모리 할당 및 점프 비용 발생
     - **메모리**: 코드 영역에 한 번만 저장 → **용량 절약**
     - **타입 검사**: 엄격함
+- 전처리에도 실행순서가 있다.
