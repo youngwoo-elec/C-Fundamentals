@@ -269,3 +269,9 @@ if (ifp == NULL || ofp == NULL)
 - gcc 커맨드 `-lm` 사용
 - **libc**(stdio,stdlib 등): auto-linked
 - **이외의 라이브러리**: 라이브러리 연결 `-l` 필요
+
+
+>### 📅 2026-04-09
+- **integral promotion (정수격 승격)**: int보다 작은 정수형 타입이 연산에 참여 -> int형으로 승격
+- 8비트(char), 16비트(short)의 계산회로를 만들기보다 32비트(int)로 통일하는 게 효율적
+- sizeof의 형식 지정자: %zu
