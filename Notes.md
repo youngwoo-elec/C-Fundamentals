@@ -275,3 +275,7 @@ if (ifp == NULL || ofp == NULL)
 - **integral promotion (정수격 승격)**: int보다 작은 정수형 타입이 연산에 참여 -> int형으로 승격
 - 8비트(char), 16비트(short)의 계산회로를 만들기보다 32비트(int)로 통일하는 게 효율적
 - sizeof의 형식 지정자: %zu
+
+
+>### 📅 2026-04-10
+- **자동 변환**: 피연산자 하나가  unsigned → 다른 피연산자도 unsigned
