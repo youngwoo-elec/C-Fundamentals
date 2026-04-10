@@ -278,4 +278,15 @@ if (ifp == NULL || ofp == NULL)
 
 
 >### 📅 2026-04-10
-- **자동 변환**: 피연산자 하나가  unsigned → 다른 피연산자도 unsigned
+- **자동 변환**: 데이터의 정밀도가 높은 쪽으로 따라감(small → big)   
+    → int → unsigned int → long → float → double → long double    
+    ⚠️ *in 01-Basic_Syntax/math.c*
+- P1. 컴퓨터는 파이($\pi$)를 끝까지 알지 못함 → 90˚가 아닌 89.999...˚가 들어감
+- P2. cos(x)가 0이 아닌 0.00..0016 정도가 됨
+- P3. tan(x) = sin(x)/cos(x) = 1/0.00..0016 = 1.6경
+- S1. fabs(cos(x))<1e-10 일 때 tan 대신 "INF"라고 출력
+- S2. 1e-10 = 1^(-10) → 대략 0 정도...
+- **절댓값**: 정수: `abs()`, 실수: `fabs()`    → 0으로부터의 거리   
+    → `abs`: <stdlib.h>    `fabs`: <math.h>   
+
+
