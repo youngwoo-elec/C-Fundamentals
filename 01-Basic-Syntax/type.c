@@ -9,6 +9,8 @@ int main(){
     else
         printf("음수입니다\n");
 
+    unsigned long val = -1;
+    printf("The biggest number: %lu\n", val);
 
 
 }
