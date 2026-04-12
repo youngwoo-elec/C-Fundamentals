@@ -65,10 +65,26 @@ void for_test(){
 }
 
 
+void ternary(){
+    /*expression = expr1?expr2:expr3
+    if(expr1)
+        expression = expr2;
+    else
+        expression = expr3;*/
+    int x,y,z;
+    printf("y z: ");
+    scanf("%d %d", &y, &z);
+    x = (y>z)?y:z;
+    printf("%d\n", x);
+
+}
+
+
 int main(){
-    if_test();
-    if_else_test();
-    while_test();
-    for_test();
+    //if_test();
+    //if_else_test();
+    //while_test();
+    //for_test();
+    ternary();
     return 0;
 }
