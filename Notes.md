@@ -322,4 +322,9 @@ if (ifp == NULL || ofp == NULL)
 
 >### 📅 2026-04-13
 - **Bool**: 0/1의 상태만 가지는 변수
-- 전통적으로 `int` / `stdbool.h` → bool, true, false 등
+- 전통적으로 `int` / `stdbool.h` → bool, true, false 등   
+    🛠️ do-while문
+ - do{   
+    statement   
+    }while (expr);   
+   next statement
