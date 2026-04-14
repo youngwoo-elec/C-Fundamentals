@@ -35,6 +35,7 @@ int main(){
                 break;
             case 7:
                 ++cnt_7;
+                break;
             default:
                 ++cnt_other;
 
