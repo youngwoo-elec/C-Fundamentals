@@ -14,7 +14,7 @@ int main(){
 void prn_heading(){
     printf("\n::::: A TABLE OF POWERS  :::::\n");
 }
-void prn_tb_of_powers(int n)
+void prn_tbl_of_powers(int n)
 {
     int i,j;
     for(i=1;i<=n;++i){
