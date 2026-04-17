@@ -1,19 +1,18 @@
 #include <stdio.h>
 #define    N   7
 
-long power(int,int);
-void prn_heading();
-void prn_tbl_of_powers(int);
-
-int main(){
-    prn_heading();
-    prn_tbl_of_powers(N);
-    return 0;
-}
-
 void prn_heading(){
     printf("\n::::: A TABLE OF POWERS  :::::\n");
 }
+
+long power(int m, int n){
+    int i;
+    long product = 1;
+    for(i=1;i<=n;++i)
+        product *= m;
+    return product;
+}
+
 void prn_tbl_of_powers(int n)
 {
     int i,j;
@@ -27,10 +26,9 @@ void prn_tbl_of_powers(int n)
     }
 }
 
-long power(int m, int n){
-    int i;
-    long product = 1;
-    for(i=1;i<=n;++i)
-        product *= m;
-    return product;
+
+int main(){
+    prn_heading();
+    prn_tbl_of_powers(N);
+    return 0;
 }
