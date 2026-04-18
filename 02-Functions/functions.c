@@ -21,5 +21,5 @@ void t_putchar(void){
 void t_assert(void){
     int x = 5;
     assert(x==5);
-    assert(x==10);
+    assert(x==10); //an assertion
 }
