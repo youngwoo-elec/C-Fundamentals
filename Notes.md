@@ -418,3 +418,11 @@ if (ifp == NULL || ofp == NULL)
 
 >### 📅 2026-04-21 ~ 23
 - **동원 훈련** (￣^￣)ゞ
+
+
+>### 📅 2026-04-25
+- **재귀함수**(recursion): 함수 내부에서 **자기 자신을 다시 호출**하는 함수
+    🛠️ 스택 (Stack)
+- **LIFO**(Last In, First Out): '나중에 들어온 것이 먼저 나가는' 데이터 구조   
+    push: 쌓기  pop: 데이터를 꺼내는 것
+- 02-Functions/functions.c(wrt_it): putchar(pop)전에 wrt_it(getchar포함-push) → 출력 전에 입력
