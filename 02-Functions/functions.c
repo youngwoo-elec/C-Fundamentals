@@ -29,7 +29,13 @@ void t_assert(void){
 void wrt_it(void){
     //재귀함수
     int c; //EOF 검사 x → c를 char 형으로 선언해도 됨
-    if((c=getchar()) != '\n')
+    if((c=getchar()) != '\n'){     
+        /*
+        putchar(c);
         wrt_it();
+        *///  → 정방향 인쇄
+        wrt_it();
+    }
     putchar(c);
+    
 }
