@@ -435,3 +435,4 @@ if (ifp == NULL || ofp == NULL)
     - hanoi.h (line 8): extern int cnt; = 선언
     - main.c: int cnt; = 정의
     - move.c: cnt: 헤더파일의 선언으로 링크
+- 여러 개의 ""로 묶인 문장 하나의 %s로 출력 가능
