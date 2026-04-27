@@ -428,3 +428,10 @@ if (ifp == NULL || ofp == NULL)
 - **LIFO**(Last In, First Out): '나중에 들어온 것이 먼저 나가는' 데이터 구조   
     push: 쌓기  pop: 데이터를 꺼내는 것
 - 02-Functions/functions.c(wrt_it): putchar(pop)전에 wrt_it(getchar포함-push) → 출력 전에 입력
+
+
+>### 📅 2026-04-26 ~ 27
+- 02-Functions/hanoi 에서   
+    - hanoi.h (line 8): extern int cnt; = 선언
+    - main.c: int cnt; = 정의
+    - move.c: cnt: 헤더파일의 선언으로 링크
