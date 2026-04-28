@@ -1,6 +1,6 @@
 #include "hanoi.h"
 
-int cnt =0;
+int cnt =0;     // 정의
 
 int main(void){
     int n;

@@ -2,7 +2,7 @@
 
 void move(int n, char a, char b, char c){
     if(n==1){
-        ++cnt;
+        ++cnt;      //헤더파일을 통해 링크
         printf("%5d: %s%d%s%c%s%c. \n",cnt,
         "Move disk ", 1, " from tower ", a, " to tower ",c);
     }
